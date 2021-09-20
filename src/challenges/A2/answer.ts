@@ -1,3 +1,5 @@
+//@ts-nocheck
+
 /**
  * In this challenge, you have to add a list of skills to each group (based on 
  * students skills in the group). Duplicates skills for one group is not permitted. Skills must be
@@ -8,12 +10,25 @@
  * @returns List of groups with a new prop skills
  */
 
+import { group } from "console";
+
 // ↓ uncomment bellow lines and add your response!
-/*
+
 export default function ({ groups }: { groups: Group[] }): GroupWithSills[] {
-    return [];
+    return groups.map((group) => {
+        console.log("Groupe name ", group.name);
+        const groupSkills: string[] = [];
+        group.students.forEach((student) => {
+            student.skills.forEach((skill) => {
+                if (groupSkills.includes(skill) === false){
+                    groupSkills.push(skill);
+                }
+            });
+        });
+        return { ...group, skills: groupSkills.sort()};
+
+    })
 }
-*/
 
 // used interfaces, do not touch
 interface Student {
