@@ -16,7 +16,6 @@ import { group } from "console";
 
 export default function ({ groups }: { groups: Group[] }): GroupWithSills[] {
     return groups.map((group) => {
-        console.log("Groupe name ", group.name);
         const groupSkills: string[] = [];
         group.students.forEach((student) => {
             student.skills.forEach((skill) => {
