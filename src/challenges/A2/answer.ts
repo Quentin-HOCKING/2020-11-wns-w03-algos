@@ -28,7 +28,6 @@ export default function ({ groups }: { groups: Group[] }): GroupWithSills[] {
 
     })
 }
-
 // used interfaces, do not touch
 interface Student {
     name: string;
